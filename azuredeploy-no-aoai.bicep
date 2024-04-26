@@ -52,10 +52,10 @@ param openAiAccountKey string = ''
 @description('Specifies the deployed model name for your Azure OpenAI account GPT model.')
 param openAiGptModelName string = ''
 
-@description('Git repository URL for the chat application. This defaults to the [`azure-samples/cosmosdb-chatgpt`](https://github.com/azure-samples/cosmosdb-chatgpt) repository.')
+@description('Git repository URL for the chat application. This defaults to the [`azure-samples/cosmosdb-chatgpt`](https://github.com/cienciadedadosebigdata/azure-cosmosdb-chatgpt) repository.')
 param appGitRepository string = 'https://github.com/cienciadedadosebigdata/azure-cosmosdb-chatgpt.git'
 
-@description('Git repository branch for the chat application. This defaults to the [**main** branch of the `azure-samples/cosmosdb-chatgpt`](https://github.com/azure-samples/cosmosdb-chatgpt/tree/main) repository.')
+@description('Git repository branch for the chat application. This defaults to the [**main** branch of the `azure-samples/cosmosdb-chatgpt`](https://github.com/cienciadedadosebigdata/azure-cosmosdb-chatgpt/tree/main) repository.')
 param appGetRepositoryBranch string = 'main'
 
 var openAiSettings = {
