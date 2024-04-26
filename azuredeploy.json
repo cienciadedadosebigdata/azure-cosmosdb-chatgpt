@@ -223,7 +223,7 @@
         "model": {
           "format": "OpenAI",
           "name": "[variables('openAiSettings').model.name]",
-          "version": "S0"
+          "version": "0613"  // Esta é a versão correta conforme definido nas variáveis acima
         }
       },
       "dependsOn": [
