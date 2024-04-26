@@ -44,7 +44,7 @@ param name string = uniqueString(resourceGroup().id)
 param appServiceSku string = 'F1'
 
 @description('Git repository URL for the chat application. This defaults to the [`azure-samples/cosmosdb-chatgpt`](https://github.com/azure-samples/cosmosdb-chatgpt) repository.')
-param appGitRepository string = 'https://github.com/azure-samples/cosmosdb-chatgpt.git'
+param appGitRepository string = 'https://github.com/cienciadedadosebigdata/azure-cosmosdb-chatgpt.git'
 
 @description('Git repository branch for the chat application. This defaults to the [**main** branch of the `azure-samples/cosmosdb-chatgpt`](https://github.com/azure-samples/cosmosdb-chatgpt/tree/main) repository.')
 param appGetRepositoryBranch string = 'main'
@@ -179,10 +179,11 @@ resource openAiModelDeployment 'Microsoft.CognitiveServices/accounts/deployments
     model: {
       format: 'OpenAI'
       name: openAiSettings.model.name
-      version: 'S0'
+      version: '0613'  // Alterado de 'S0' para '0613' conforme definido nas variáveis
     }
   }
 }
+
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServiceSettings.plan.name
